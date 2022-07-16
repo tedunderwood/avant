@@ -45,7 +45,7 @@ The solution we’ll advance is to compare each book only to the 5% of volumes t
 
 This solution was tested experimentally in Underwood and So 2020. In practice, measuring novelty and transience this way produces effects that are usually in the same direction as, and fairly close to, effects measured relative to all volumes. But since there is a theoretical justification for the more-tightly-focused measure, and it is arguably less vulnerable to noisy outliers, we will rely primarily on that. We will still, however, measure and discuss precocity measured with relation to the whole dataset.
 
-**B1. Reception variables that correlate with novelty: **Equipped with these measures, we can ask which of the ten social locations itemized above tend to reward innovation. In other words, if we sort books using the total length of their reviews (in 2) or their tendency to be reviewed more in little magazines (in 9), which of those factors correlates most strongly with the novelty score we inferred from the book’s text?
+**B1. Reception variables that correlate with novelty:** Equipped with these measures, we can ask which of the ten social locations itemized above tend to reward innovation. In other words, if we sort books using the total length of their reviews (in 2) or their tendency to be reviewed more in little magazines (in 9), which of those factors correlates most strongly with the novelty score we inferred from the book’s text?
 
 Some of the reception variables we’re considering are binary (a book either is a bestseller or is not). Some of them are continuous (_how_ positively was a book reviewed?) But we can compare all the variables’ association with novelty by converting different measurements of effect size to Cohen’s _d._ We’ll focus on six measures of reception that are well attested and very different from each other: measures 2, 3, 7, 8, 9, and 10 above.
 
@@ -77,7 +77,7 @@ Averaging the rankings we get     	avg rank		rank after averaging
 
 Our predictions cluster pretty strongly. Kendall’s W is .50 and the mean Spearman correlation between individual rankers and the average is .76.
 
-Whether the actual ranking is similar to this or quite different, our pre-registered prediction give us a way to discuss aspects of the ranking that diverge from expectation. We won’t of course be able to get a _p _value for that; the number of observations is too small.
+Whether the actual ranking is similar to this or quite different, our pre-registered prediction give us a way to discuss aspects of the ranking that diverge from expectation. We won’t of course be able to get a _p_ value for that; the number of observations is too small.
 
 **B2. How do rewards vary with a work’s degree of innovation?**
 
@@ -87,9 +87,9 @@ It’s straightforward to predict that we will get the inverted U observed by ot
 
 Because Shang has extracted contemporary genre categories from the BRD, we can also plot a reward curve specifically for “mystery and detective fiction” or “historical fiction.” [Across the 30-odd year span of a single reference book, genre instability doesn’t pose the same problems we would experience if we tried to apply stable genre categories across the full 100-year span of our topic model.]
 
-**B3. Transience. **We will graph innovation versus transience. Here, we expect the linear relationship observed by Barron et al (2018). On average, radical innovations tend not to persist (although there are important exceptions).
+**B3. Transience.** We will graph innovation versus transience. Here, we expect the linear relationship observed by Barron et al (2018). On average, radical innovations tend not to persist (although there are important exceptions).
 
-**B4. Reception variables that correlate with precocity. **We can also pose questions about _durable_ change. Since innovations tend to be transient, innovation is not at all the same thing as durable change. But if we subtract difference from the future from difference from the past, we can get a measure of a book’s durable innovation. To put it another way, this is a measure of overall displacement on the timeline: how much _more_ a book resembles the future than the past. We call this “precocity.”
+**B4. Reception variables that correlate with precocity.** We can also pose questions about _durable_ change. Since innovations tend to be transient, innovation is not at all the same thing as durable change. But if we subtract difference from the future from difference from the past, we can get a measure of a book’s durable innovation. To put it another way, this is a measure of overall displacement on the timeline: how much _more_ a book resembles the future than the past. We call this “precocity.”
 
 Each of the five of us ranked the same six reception variables discussed above by expected strength of association with precocity (again this will be measured as Cohen’s _d_.)
 
@@ -103,19 +103,16 @@ Wenyi: 10, 7, 3, 2, 8, 9
 
 Yuerong: 9, 8, 10, 7, 2, 3
 
-Averaging the rankings we get     	avg rank		rank after averaging
+Averaging the rankings we get     	
 
-2: most written-about 		2.4			3
-
-3: most positively reviewed		4.4			5
-
-7: prizewinners			1.6			1
-
-8: bestsellers				1.8			2
-
-9: disproportionately in lit. mag.	3.4			4
-
-10: later seen as avant-garde	1.4			0
+| reception variable     |  avg rank   | rank after averaging|
+|------------------------|-------------|---------------------|
+| 2: most written-about|	2.4		|	3    |
+| 3: most positively reviewed	|	4.4		|	5  |
+| 7: prizewinners		|	1.6	  |		1  |
+| 8: bestsellers		|		1.8		|	2   |
+| 9: disproportionately in lit. mag.  |	3.4	  |		4  |
+| 10: later seen as avant-garde	   | 1.4	|		0    |
 
 In general, the retrospective avant-garde moves down here, and prizewinners & bestsellers move up. Clustering is less strong; Kendall’s W is 0.4 and the mean Spearman correlation with the average is 0.68. We can use those measures to ask whether the results we actually get fall within, or exceed, our typical divergence from each other.
 
