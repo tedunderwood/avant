@@ -61,19 +61,16 @@ Wenyi: 10, 9, 2, 7, 3, 8
 
 Yuerong: 10, 9, 8, 7, 2, 3
 
-Averaging the rankings we get     	avg rank		rank after averaging
+Averaging the rankings we get     	
 
-2: most written-about 		2.8			2
-
-3: most positively reviewed		4.0			5
-
-7: prizewinners			3.0			3
-
-8: bestsellers				3.4			4
-
-9: disproportionately in lit. mag.	0.6			0
-
-10: later seen as avant-garde	1.2			1
+| reception variable     |  avg rank   | rank after averaging|
+|------------------------|-------------|---------------------|
+| 9: disproportionately in lit. mag.   |	0.6	  |		0   |
+| 10: later seen as avant-garde  |	1.2		|	1   |
+| 2: most written-about |	2.8		| 	2    |
+| 7: prizewinners	|		3.0	|	3   |
+| 8: bestsellers	|			3.4	   |		4   |
+| 3: most positively reviewed	|	4.0	|	5 |
 
 Our predictions cluster pretty strongly. Kendall’s W is .50 and the mean Spearman correlation between individual rankers and the average is .76.
 
@@ -107,12 +104,12 @@ Averaging the rankings we get
 
 | reception variable     |  avg rank   | rank after averaging|
 |------------------------|-------------|---------------------|
-| 2: most written-about|	2.4		|	3    |
-| 3: most positively reviewed	|	4.4		|	5  |
+| 10: later seen as avant-garde	   | 1.4	|		0    |
 | 7: prizewinners		|	1.6	  |		1  |
 | 8: bestsellers		|		1.8		|	2   |
+| 2: most written-about|	2.4		|	3    |
 | 9: disproportionately in lit. mag.  |	3.4	  |		4  |
-| 10: later seen as avant-garde	   | 1.4	|		0    |
+| 3: most positively reviewed	|	4.4		|	5  |
 
 In general, the retrospective avant-garde moves down here, and prizewinners & bestsellers move up. Clustering is less strong; Kendall’s W is 0.4 and the mean Spearman correlation with the average is 0.68. We can use those measures to ask whether the results we actually get fall within, or exceed, our typical divergence from each other.
 
