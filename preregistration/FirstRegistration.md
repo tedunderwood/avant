@@ -111,7 +111,9 @@ Averaging the rankings we get
 | 9: disproportionately in lit. mag.  |	3.4	  |		4  |
 | 3: most positively reviewed	|	4.4		|	5  |
 
-In general, the retrospective avant-garde moves down here, and prizewinners & bestsellers move up. Clustering is less strong; Kendall’s W is 0.4 and the mean Spearman correlation with the average is 0.68. We can use those measures to ask whether the results we actually get fall within, or exceed, our typical divergence from each other.
+In general, the little magazine favorites move down here, and prizewinners & bestsellers move up. Discussion in our lab meeting suggested that bestsellers were expected to be influential almost by definition: there are a lot of copies in circulation.
+
+Clustering is less strong; Kendall’s W is 0.4 and the mean Spearman correlation with the average is 0.68. We can use those measures to ask whether the results we actually get fall within, or exceed, our typical divergence from each other.
 
 Interpreting precocity is tricky. It could tell us which venues of reception were best at _identifying_ incipient directions of change—or, possibly, which venues exerted most _influence_ on literary culture. Since our evidence is observational, it will be hard to separate those possibilities. But measurement of precocity is in any case analogous to Granger causation or predictive power. With a fairly simple transformation (adding up all the books reviewed in a particular venue) we could actually measure Granger causation if we wanted to — and we will.
 
