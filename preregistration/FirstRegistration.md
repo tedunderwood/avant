@@ -12,16 +12,16 @@ Because book reviews are richly recorded in published indexes, scholars of liter
 
 Together, these sources about reception will allow us to study reception in ten different ways.
 
-    1. Books that got the most reviews.
-    2. Books about which most was written (adding up the length of each review).
-    3. Books more _positively_ reviewed, measured with the +/- codes included in the BRD, supplemented by a sentiment model trained on those +/- codes and used for reviews that are lacking a code.
-    4. Books reviewed by specific publications (we can itemize, say, 10 leading publications in the _BRD_).
-    5. Books widely reviewed by little magazines; this is one way of defining an "avant garde."
-    6. Books published by particularly prestigious publishers (e.g., Knopf).
-    7. Books that won Pulitzer/Nobel prizes.
-    8. Bestsellers (the top 10 per year from Unsworth’s list).
-    9. We can use principal component analysis on the whole reception matrix, and then “rotate” the components to find one that tends to distinguish wide-circulation venues (like newspapers) from little magazines. This is another way of defining “avant garde,” and arguably better than the absolute count in (5) at identifying books that get relatively _more_ attention in intellectual venues than in mass-market ones.
-    10. A retrospective definition of the early-20c avant-garde extracted from recent 21c secondary sources by David Bishop and Liza Senatorova.
+1. Books that got the most reviews.
+2. Books about which most was written (adding up the length of each review).
+3. Books more _positively_ reviewed, measured with the +/- codes included in the BRD, supplemented by a sentiment model trained on those +/- codes and used for reviews that are lacking a code.
+4. Books reviewed by specific publications (we can itemize, say, 10 leading publications in the _BRD_).
+5. Books widely reviewed by little magazines; this is one way of defining an "avant garde."
+6. Books published by particularly prestigious publishers (e.g., Knopf).
+7. Books that won Pulitzer/Nobel prizes.
+8. Bestsellers (the top 10 per year from Unsworth’s list).
+9. We can use principal component analysis on the whole reception matrix, and then “rotate” the components to find one that tends to distinguish wide-circulation venues (like newspapers) from little magazines. This is another way of defining “avant garde,” and arguably better than the absolute count in (5) at identifying books that get relatively _more_ attention in intellectual venues than in mass-market ones.
+10. A retrospective definition of the early-20c avant-garde extracted from recent 21c secondary sources by David Bishop and Liza Senatorova.
 
 ## Questions to pose
 
