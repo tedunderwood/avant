@@ -1,6 +1,8 @@
-## Pre-registration for “Innovation, Publicity, and Change in Literary Culture”
+# Pre-registration for “Innovation, Publicity, and Change in Literary Culture”
 
 Because book reviews are richly recorded in published indexes, scholars of literary history have an unusual opportunity to compare literature’s textual history (in the books themselves) to its social history (who talked about those books, what they said, how widely it circulated). We plan to use this opportunity to study the rewards for innovation, and the way those rewards are related to change across relatively long spans of time (roughly 80 years).
+
+## Data
 
 **Textual data:** We’ll take a random sample of English-language fiction from HathiTrust Digital Library, from 1890 to 2000, keeping the number of volumes per decade constant. We’ll form a model of 300 topics (basing this number on a previous experiment by Underwood, Kiley, Shang, and Vaisey). For volumes not present in this sample, we can extrapolate topic proportions using a topic inferencer created by MALLET.
 
@@ -10,24 +12,24 @@ Because book reviews are richly recorded in published indexes, scholars of liter
 
 Together, these sources about reception will allow us to study reception in ten different ways.
 
+    1. Books that got the most reviews.
+    2. Books about which most was written (adding up the length of each review).
+    3. Books more _positively_ reviewed, measured with the +/- codes included in the BRD, supplemented by a sentiment model trained on those +/- codes and used for reviews that are lacking a code.
+    4. Books reviewed by specific publications (we can itemize, say, 10 leading publications in the _BRD_).
+    5. Books widely reviewed by little magazines; this is one way of defining an "avant garde."
+    6. Books published by particularly prestigious publishers (e.g., Knopf).
+    7. Books that won Pulitzer/Nobel prizes.
+    8. Bestsellers (the top 10 per year from Unsworth’s list).
+    9. We can use principal component analysis on the whole reception matrix, and then “rotate” the components to find one that tends to distinguish wide-circulation venues (like newspapers) from little magazines. This is another way of defining “avant garde,” and arguably better than the absolute count in (5) at identifying books that get relatively _more_ attention in intellectual venues than in mass-market ones.
+    10. A retrospective definition of the early-20c avant-garde extracted from recent 21c secondary sources by David Bishop and Liza Senatorova.
 
+## Questions to pose
 
-1. Books that got the most reviews.
-2. Books about which most was written (adding up the length of each review).
-3. Books more _positively_ reviewed, measured with the +/- codes included in the BRD, supplemented by a sentiment model trained on those +/- codes and used for reviews that are lacking a code.
-4. Books reviewed by specific publications (we can itemize, say, 10 leading publications in the _BRD_).
-5. Books widely reviewed by little magazines; this is one way of defining an "avant garde."
-6. Books published by particularly prestigious publishers (e.g., Knopf).
-7. Books that won Pulitzer/Nobel prizes.
-8. Bestsellers (the top 10 per year from Unsworth’s list).
-9. We can use principal component analysis on the whole reception matrix, and then “rotate” the components to find one that tends to distinguish wide-circulation venues (like newspapers) from little magazines. This is another way of defining “avant garde,” and arguably better than the absolute count in (5) at identifying books that get relatively _more_ attention in intellectual venues than in mass-market ones.
-10. A retrospective definition of the early-20c avant-garde extracted from recent 21c secondary sources by David Bishop and Liza Senatorova.
-
-**A. Analyzing the review data on its own.** Before we even look at the texts of books, it’s reasonable to ask whether these different measures are positively related to each other. Are best-selling (8) and prize-winning (7) books also written about a lot (2) or written about positively (3)?
+**A. Analyzing the review data on its own.** Before we even look at the texts of books, it’s reasonable to ask whether these different measures of reception are positively related to each other. Are best-selling (8) and prize-winning (7) books also written about a lot (2) or written about positively (3)?
 
 And do the _evaluative judgments_ of different reviewing venues tend to correlate positively with each other?
 
-Broadly, we do expect positive correlation, with the possible exception that our measure (9)—which will be defined by contrasting small-circulation venues to wide-circulation ones—may not correlate positively with the total volume of review discourse (2). Also there may be a few pairs of venues whose judgments do correlate negatively.
+Broadly, we do expect positive correlation, with the possible exception that our measure (9)—which will be defined by contrasting small-circulation venues to wide-circulation ones—may not correlate positively with the total volume of review discourse (2). Also there may be pairs of venues whose judgments do correlate negatively.
 
 **B. Measuring novelty and precocity in the texts of books:** The measure of “novelty” in Barron et al. (2018) provides a simple way to measure innovation (as, say, KL divergence from the topic distributions of books in the last 25 years). We propose to use a 25-year window because Underwood and So (2020) found empirically, looking at a different collection of primarily nineteenth-century fiction, that patterns of this kind are legible within a window of 20 to 25 years.
 
@@ -39,13 +41,15 @@ Precocity is novelty minus transience.
 
 But—at least arguably—this isn’t what most people mean by literary innovation. A book that introduces a new technique or theme to the mystery genre might be said to resemble the future even if the mystery genre as a whole is shrinking. Its innovation *relative to its genre* could be seen as more important than the fortunes of the genre as a whole. There is thus a strong argument for calculating innovation and transience within genres.
 
-The challenge in doing this is that we don’t have genre tags for all books, and even if we did, it would be extremely difficult to reason about them across significant spans of time. Genres mutate, split, and fuse, and people have different perceptions about genre at different points in time. Asking whether China Miéville is in “the same genre” as JRR Tolkien would prejudge some of the questions about innovation and change we’re trying to answer.
+The challenge in doing this is that we don’t have genre tags for all books, and even if we did, it would be extremely difficult to reason about them across significant spans of time. Genres mutate, split, and fuse, and people have different perceptions about genre at different points in time. Asking whether China Miéville is in “the same genre” as JRR Tolkien would prejudge some of the questions about innovation and change we’re trying to answer. For that matter, we don’t know that works only influence works within the boundaries of a single genre.
 
-The solution we’ll advance is to compare each book only to the 5% of volumes that most closely resemble it in any given year. This selection of volumes won’t necessarily coincide with the boundaries of a genre as defined by human readers. (Genres can be much smaller than 5% of the market.) But then again, we don’t know that works only influence works within the boundaries of a single genre. Comparing to the closest 5% is a reasonable way of measuring the innovation, or durability, of a work *relative to other works that could conceivably be seen as its precedents or inheritors*.
+The solution we’ll advance is to compare each book only to the 5% of volumes that most closely resemble it in any given year. This selection of volumes won’t necessarily coincide with the boundaries of a genre as defined by human readers. (Genres can be much smaller than 5% of the market.) But comparing to the closest 5% is a reasonable way of measuring the innovation, or durability, of a work *relative to other works that could conceivably be seen as its precedents or inheritors*.
 
-This solution was tested experimentally in Underwood and So 2020. In practice, measuring novelty and transience this way produces effects that are usually in the same direction as, and fairly close to, effects measured relative to all volumes. But since there is a theoretical justification for the more-tightly-focused measure, and it is arguably less vulnerable to noisy outliers, we will rely primarily on that. We will still, however, measure and discuss precocity measured with relation to the whole dataset.
+This solution was tested experimentally in Underwood and So 2020. In practice, measuring novelty and transience this way produces effects that are usually in the same direction as, and fairly close to, effects measured relative to all volumes. But since there is a theoretical justification for the more-tightly-focused measure, and it is arguably less vulnerable to noisy outliers, we will rely primarily on that. We will still, however, measure and discuss precocity measured with relation to the whole dataset; that's a distinct measure with its own kind of significance.
 
-**B1. Reception variables that correlate with novelty:** Equipped with these measures, we can ask which of the ten social locations itemized above tend to reward innovation. In other words, if we sort books using the total length of their reviews (in 2) or their tendency to be reviewed more in little magazines (in 9), which of those factors correlates most strongly with the novelty score we inferred from the book’s text?
+Finally, we’ll normalize measurements of novelty and precocity by converting them into z-scores relative to other books in a five-year moving window. We do this because these measurements can conceivably fluctuate across the timeline for a variety of reasons—ranging from real historical change to artefacts of processing. In this experiment we’re not asking whether the pace of innovation has changed across time; we’re asking which books were novel or durably innovative for their time. Normalizing relative to the immediate environment seems like a principled move, and it’s one that seemed to reduce distortion in Underwood and So 2020.
+
+**B1. Reception variables that correlate with novelty:** Equipped with these measures, we can ask which of the ten social locations itemized above tend to reward innovation. In other words, if we sort books using the total length of their reviews (in 2) or their tendency to be reviewed more in little magazines (in 9), which of those factors correlates most strongly with the novelty score we inferred from the book’s text? (We'll use Spearman correlation because we don't know the pattern will be linear.)
 
 Some of the reception variables we’re considering are binary (a book either is a bestseller or is not). Some of them are continuous (_how_ positively was a book reviewed?) But we can compare all the variables’ association with novelty by converting different measurements of effect size to Cohen’s _d._ We’ll focus on six measures of reception that are well attested and very different from each other: measures 2, 3, 7, 8, 9, and 10 above.
 
@@ -76,7 +80,7 @@ Our predictions cluster pretty strongly. Kendall’s W is .50 and the mean Spear
 
 Whether the actual ranking is similar to this or quite different, our pre-registered prediction give us a way to discuss aspects of the ranking that diverge from expectation. We won’t of course be able to get a _p_ value for that; the number of observations is too small.
 
-**B2. How do rewards vary with a work’s degree of innovation?**
+**B2. How do rewards vary with a work’s *degree* of innovation?**
 
 We can also infer a reward curve, like the one in Silver, Childress, et al (2022). For instance, what is the relation between innovation and the amount a book gets discussed (measured as total number of words mentioned in the _BRD_.)
 
