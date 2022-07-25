@@ -6,3 +6,5 @@ These results probably won't be used for the final article, because they use a 2
 But they're interesting because they *can* be paired to last year's article, which gives us some interesting additional data about patterns within the careers of individual authors.
 
 The results were generated using ```calculate_supp5_kld.py``` and ```kld_calc_worker_supp5.py.``` These rather opaque names are inherited from the 2020 Underwood/So article and I'll probably change them in the next iteration when we run on 300-topic data.
+
+The most interesting places to start exploring the results are ```FirstAnalysis200k.ipynb``` and ```granger.ipynb```, though the latter needs some documenting and editing before it will make much sense.
