@@ -1,1 +1,2 @@
-
+# Warning 
+The code represented above should scrape and parse Google and Wiki pages. Its main goal is to get information about the nationality of the authors from the spreadsheet "finalcorpus.csv". Unfortunately, sometimes the code can break because not all of the pages on the Internet are unified in their rendering. I tried to overcome such issues and create some tricks. But no one is safe (sigh)...
